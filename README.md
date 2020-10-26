@@ -7,3 +7,6 @@ Demo for cypress with browserstack and percy
 
 To run the project with browserstack run:
 $> browserstack-cypress run
+
+To insatll Browserstack in local, follow this lik:
+https://www.browserstack.com/docs/automate/cypress
