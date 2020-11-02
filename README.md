@@ -10,3 +10,5 @@ $> browserstack-cypress run
 
 To insatll Browserstack in local, follow this lik:
 https://www.browserstack.com/docs/automate/cypress
+
+***
