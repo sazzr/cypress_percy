@@ -1,13 +1,14 @@
 /// <reference types="cypress" />
+import '@percy/cypress';
 
 context('Actions', () => {
     beforeEach(() => {
-        cy.visit('https://www.wthubspot.com/component-docs/?path=/story/');
-        cy.get('#buttons-avatar', { timeout: 20000 }).click();
-        cy.get('#buttons-avatar-component', { timeout: 20000 }).click();
+        cy.visit('/?path=/story/');
+        cy.get('#buttons-avatar').click();
+        cy.get('#buttons-avatar-component').click();
     })
 
-    describe('Buttons', function() {
+    describe('Avatar Buttons', function() {
         describe('Components', function() {
             describe('Editable', function() {
                 it(' Find href Avatar -> Component -> Editable should leads to editable page', function () {
@@ -29,7 +30,7 @@ context('Actions', () => {
         
                 it(' It should have Four controls', function () {
                     cy.get('#buttons-avatar-component--editable').click();
-                    cy.get('#tabbutton-controls-1').should('have.text', 'Controls (1)');
+                    cy.get('#tabbutton-controls-4').should('have.text', 'Controls (4)');
                     cy.percySnapshot();
                 });
     
@@ -44,7 +45,7 @@ context('Actions', () => {
                     cy.get('#buttons-avatar-component--editable').click();
                     cy.get('#tabbutton-accessibility').click();
     
-                    cy.get('.css-fg630j').should('have.text', '5 Passes');
+                    cy.get('.css-fg630j').should('have.text', '7 Passes');
                 });
 
                 it(' Having 0 incomplete', function () {

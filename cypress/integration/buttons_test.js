@@ -2,9 +2,9 @@
 
 context('Actions', () => {
     beforeEach(() => {
-        cy.visit('https://www.wthubspot.com/component-docs/?path=/story/');
-        cy.get('#buttons-button', { timeout: 20000 }).click();
-        cy.get('#buttons-button-component', { timeout: 20000 }).click();
+        cy.visit('/?path=/story/');
+        cy.get('#buttons-button').click();
+        cy.get('#buttons-button-component').click();
     })
 
     describe('Buttons', function() {
@@ -26,7 +26,7 @@ context('Actions', () => {
         
                 it(' It should have Four controls', function () {
                     cy.get('#buttons-button-component--editable').click();
-                    cy.get('#tabbutton-controls-4').should('have.text', 'Controls (4)');
+                    cy.get('#tabbutton-controls-6').should('have.text', 'Controls (6)');
                 });
     
                 it(' Having one violations', function () {
