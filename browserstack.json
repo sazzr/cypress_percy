@@ -1,7 +1,7 @@
 {
     "auth": {
-        "username": "manish770",
-        "access_key": "#$%#%#"
+        "username": "manishkunmar1",
+        "access_key": "uAuzag7XgVzYBxAZwum5"
     },
     "browsers": [
         {
@@ -39,7 +39,9 @@
         "build_name": "Build no. 1",
         "exclude": [],
         "parallels": "1",
-        "npm_dependencies": {},
+        "npm_dependencies": {
+            "@percy/cypress": "^2.3.2"
+        },
         "package_config_options": {}
     },
     "connection_settings": {
