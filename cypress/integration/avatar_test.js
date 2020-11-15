@@ -1,5 +1,4 @@
 /// <reference types="cypress" />
-import '@percy/cypress';
 
 context('Actions', () => {
     beforeEach(() => {
