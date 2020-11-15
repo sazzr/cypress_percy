@@ -40,7 +40,7 @@ context('Actions', () => {
                     cy.get('#buttons-button-component--editable').click();
                     cy.get('#tabbutton-accessibility').click();
     
-                    //cy.get('.css-fg630j').should('have.text', '2 Passes');
+                    cy.get('.css-fg630j').should('have.text', '2 Passes');
                 });
             })
         })

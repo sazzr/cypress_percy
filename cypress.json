@@ -3,5 +3,10 @@
     "video": false ,
     "defaultCommandTimeout" : 25000,
     "pageLoadTimeout" : 25000,
-    "responseTimeout" : 25000
+    "responseTimeout" : 25000,
+    "reporter": "junit",
+    "reporterOptions": {
+      "mochaFile": "results/cypress-report.xml",
+      "toConsole": true
+    }
 }

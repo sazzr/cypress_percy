@@ -6,8 +6,8 @@
   "scripts": {
     "test": "percy exec -- cypress run",
     "browserstack": "browserstack-cypress run",
-    "cypress": "node_modules\\.bin\\cypress run",
-    "preTest": "npm run cypress --"
+    "rs": "node_modules\\.bin\\cypress run",
+    "preTest": "npm run rs --"
   },
   "author": "",
   "license": "ISC",
