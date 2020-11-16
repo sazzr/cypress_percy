@@ -13,6 +13,7 @@ pipeline {
         }
         stage('Browserstack') {
             steps {
+                sh 'npm install -g browserstack-cypress-cli'
                 sh 'npm run browserstack'
             }
         }
