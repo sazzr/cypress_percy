@@ -8,9 +8,9 @@ context('Buttons', () => {
     })
 
     
-    describe('Components', function() {
-        describe('Editable', function() {
-            it(' Find href Buttons -> Component -> Editable should leads to editable page', function () {
+    describe('[Buttons] Components', function() {
+        describe('[Buttons] Editable', function() {
+            it(' [Buttons] Is edit clickable', function () {
                 /** 
                 *** Arrange  - setup
                 *** Visit webpage
@@ -24,19 +24,19 @@ context('Buttons', () => {
                     .should('includes', '/buttons-button-component--editable');
             });
     
-            it(' It should have Four controls', function () {
+            it(' [Buttons] Does have Six controls', function () {
                 cy.get('#buttons-button-component--editable').click();
                 cy.get('#tabbutton-controls-6').should('have.text', 'Controls (6)');
             });
 
-            it(' Having one violations', function () {
+            it(' [Buttons] Should have 0 accessibility violations', function () {
                 cy.get('#buttons-button-component--editable').click();
                 cy.get('#tabbutton-accessibility').click();
 
                 cy.get('.css-qacwg0').should('have.text', '1 Violations');
             });
 
-            it(' It should have 2 passes', function () {
+            it(' [Buttons] Should have 0 incomplete', function () {
                 cy.get('#buttons-button-component--editable').click();
                 cy.get('#tabbutton-accessibility').click();
 

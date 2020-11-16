@@ -7,9 +7,9 @@ context('Avatar', () => {
         cy.get('#buttons-avatar-component').click();
     })
 
-    describe('Components', function() {
-        describe('Editable', function() {
-            it(' Find href Avatar -> Component -> Editable should leads to editable page', function () {
+    describe(' [Avatar] Components', function() {
+        describe(' [Avatar] Editable', function() {
+            it(' [Avatar] Is edit clickable', function () {
                 /** 
                 *** Arrange  - setup
                 *** Visit webpage
@@ -26,27 +26,27 @@ context('Avatar', () => {
                 cy.percySnapshot();
             });
     
-            it(' It should have Four controls', function () {
+            it(' [Avatar] Does have four controls', function () {
                 cy.get('#buttons-avatar-component--editable').click();
                 cy.get('#tabbutton-controls-4').should('have.text', 'Controls (4)');
                 cy.percySnapshot();
             });
 
-            it(' Having 0 violations', function () {
+            it(' [Avatar] Should have 0 accessibility violations', function () {
                 cy.get('#buttons-avatar-component--editable').click();
                 cy.get('#tabbutton-accessibility').click();
 
                 cy.get('.css-qacwg0').should('have.text', '0 Violations');
             });
 
-            it(' Having 5 passes', function () {
+            it(' [Avatar] Does 7 test passed', function () {
                 cy.get('#buttons-avatar-component--editable').click();
                 cy.get('#tabbutton-accessibility').click();
 
                 cy.get('.css-fg630j').should('have.text', '7 Passes');
             });
 
-            it(' Having 0 incomplete', function () {
+            it(' [Avatar] Should have 0 incomplete', function () {
                 cy.get('#buttons-avatar-component--editable').click();
                 cy.get('#tabbutton-accessibility').click();
 
