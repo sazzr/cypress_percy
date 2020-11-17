@@ -8,6 +8,7 @@ pipeline {
         }
         stage('Cypress and Perrcy') {
             steps {
+                sh 'rm results/*'
                 sh 'npm run percy'
             }
         }
