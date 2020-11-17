@@ -1,14 +1,14 @@
 /// <reference types="cypress" />
 
 describe(' [Avatar] ', function() {
-    context('Editable', () => {
+    context('Component -> Editable', () => {
         beforeEach(() => {
             cy.visit('/?path=/story/');
             cy.get('#buttons-avatar').click();
             cy.get('#buttons-avatar-component').click();
         })
 
-        it('[Avatar]Is edit clickable', function () {
+        it('[Is avatar edit clickable', function () {
             /** 
             *** Arrange  - setup
             *** Visit webpage
@@ -25,27 +25,27 @@ describe(' [Avatar] ', function() {
             cy.percySnapshot();
         });
     
-        it('[Avatar] Does have four controls', function () {
+        it('Does avatar editable have four controls', function () {
             cy.get('#buttons-avatar-component--editable').click();
             cy.get('#tabbutton-controls-4').should('have.text', 'Controls (4)');
             cy.percySnapshot();
         });
     
-        it('[Avatar] Should have 0 accessibility violations', function () {
+        it('Avatar editable should have 0 accessibility violations', function () {
             cy.get('#buttons-avatar-component--editable').click();
             cy.get('#tabbutton-accessibility').click();
     
             cy.get('.css-qacwg0').should('have.text', '0 Violations');
         });
     
-        it(' [Avatar] Does 7 test passed', function () {
+        it('Does 7 test passed', function () {
             cy.get('#buttons-avatar-component--editable').click();
             cy.get('#tabbutton-accessibility').click();
     
             cy.get('.css-fg630j').should('have.text', '7 Passes');
         });
     
-        it(' [Avatar] Should have 0 incomplete', function () {
+        it('Should have 0 incomplete', function () {
             cy.get('#buttons-avatar-component--editable').click();
             cy.get('#tabbutton-accessibility').click();
     
