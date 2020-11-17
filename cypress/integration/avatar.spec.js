@@ -8,7 +8,7 @@ describe(' [Avatar] ', function() {
             cy.get('#buttons-avatar-component').click();
         })
 
-        it('Is edit clickable', function () {
+        it('[Avatar]Is edit clickable', function () {
             /** 
             *** Arrange  - setup
             *** Visit webpage
@@ -25,13 +25,13 @@ describe(' [Avatar] ', function() {
             cy.percySnapshot();
         });
     
-        it(' [Avatar] Does have four controls', function () {
+        it('[Avatar] Does have four controls', function () {
             cy.get('#buttons-avatar-component--editable').click();
             cy.get('#tabbutton-controls-4').should('have.text', 'Controls (4)');
             cy.percySnapshot();
         });
     
-        it(' [Avatar] Should have 0 accessibility violations', function () {
+        it('[Avatar] Should have 0 accessibility violations', function () {
             cy.get('#buttons-avatar-component--editable').click();
             cy.get('#tabbutton-accessibility').click();
     
