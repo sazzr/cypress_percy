@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Dependencies') {
             steps {
+                sh 'rm -f results/*'
                 sh 'npm install'
             }
         }
-        stage('Cypress and Perrcy') {
+        stage('Cypress and Percy') {
             steps {
-                sh 'rm results/*'
                 sh 'npm run percy'
             }
         }
