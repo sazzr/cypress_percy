@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
-describe('Buttons', function() {
-    context('Editable', () => {
+describe(' [Buttons] ', function() {
+    context('Component -> Editable', () => {
         
         beforeEach(() => {
             cy.visit('/?path=/story/');
@@ -9,7 +9,7 @@ describe('Buttons', function() {
             cy.get('#buttons-button-component').click();
         })
 
-        it(' [Buttons] Is edit clickable', function () {
+        it('Is edit clickable', function () {
             /** 
             *** Arrange  - setup
             *** Visit webpage
@@ -22,19 +22,19 @@ describe('Buttons', function() {
                 .should('includes', '/buttons-button-component--editable');
         });
     
-        it(' [Buttons] Does have Six controls', function () {
+        it('Does have Six controls', function () {
             cy.get('#buttons-button-component--editable').click();
             cy.get('#tabbutton-controls-6').should('have.text', 'Controls (6)');
         });
     
-        it(' [Buttons] Should have 0 accessibility violations', function () {
+        it('Should have 0 accessibility violations', function () {
             cy.get('#buttons-button-component--editable').click();
             cy.get('#tabbutton-accessibility').click();
     
             cy.get('.css-qacwg0').should('have.text', '1 Violations');
         });
     
-        it(' [Buttons] Should have 0 incomplete', function () {
+        it('Should have 0 incomplete', function () {
             cy.get('#buttons-button-component--editable').click();
             cy.get('#tabbutton-accessibility').click();
     
