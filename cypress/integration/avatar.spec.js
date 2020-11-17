@@ -8,7 +8,7 @@ describe(' [Avatar] ', function() {
             cy.get('#buttons-avatar-component').click();
         })
 
-        it(' [Avatar] Is edit clickable', function () {
+        it('Is edit clickable', function () {
             /** 
             *** Arrange  - setup
             *** Visit webpage
