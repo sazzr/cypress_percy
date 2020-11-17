@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe(' [Avatar] ', function() {
+describe('[Avatar]', function() {
     context('Component -> Editable', () => {
         beforeEach(() => {
             cy.visit('/?path=/story/');
