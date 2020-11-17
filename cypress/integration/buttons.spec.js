@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe(' [Buttons] ', function() {
+describe('[Buttons]', function() {
     context('Component -> Editable', () => {
         
         beforeEach(() => {
