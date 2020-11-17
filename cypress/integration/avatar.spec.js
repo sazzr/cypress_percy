@@ -8,7 +8,7 @@ describe(' [Avatar] ', function() {
             cy.get('#buttons-avatar-component').click();
         })
 
-        it('[Is avatar edit clickable', function () {
+        it('Is edit clickable', function () {
             /** 
             *** Arrange  - setup
             *** Visit webpage
@@ -25,20 +25,20 @@ describe(' [Avatar] ', function() {
             cy.percySnapshot();
         });
     
-        it('Does avatar editable have four controls', function () {
+        it('Does have all controls', function () {
             cy.get('#buttons-avatar-component--editable').click();
             cy.get('#tabbutton-controls-4').should('have.text', 'Controls (4)');
             cy.percySnapshot();
         });
     
-        it('Avatar editable should have 0 accessibility violations', function () {
+        it('Should have 0 accessibility violations', function () {
             cy.get('#buttons-avatar-component--editable').click();
             cy.get('#tabbutton-accessibility').click();
     
             cy.get('.css-qacwg0').should('have.text', '0 Violations');
         });
     
-        it('Does 7 test passed', function () {
+        it('Does all test passed', function () {
             cy.get('#buttons-avatar-component--editable').click();
             cy.get('#tabbutton-accessibility').click();
     

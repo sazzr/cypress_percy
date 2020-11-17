@@ -22,7 +22,7 @@ describe(' [Buttons] ', function() {
                 .should('includes', '/buttons-button-component--editable');
         });
     
-        it('Does have Six controls', function () {
+        it('Does have all controls', function () {
             cy.get('#buttons-button-component--editable').click();
             cy.get('#tabbutton-controls-6').should('have.text', 'Controls (6)');
         });
@@ -32,6 +32,13 @@ describe(' [Buttons] ', function() {
             cy.get('#tabbutton-accessibility').click();
     
             cy.get('.css-qacwg0').should('have.text', '1 Violations');
+        });
+
+        it('Does all test passed', function () {
+            cy.get('#buttons-button-component--editable').click();
+            cy.get('#tabbutton-accessibility').click();
+    
+            cy.get('.css-fg630j').should('have.text', '2 Passes');
         });
     
         it('Should have 0 incomplete', function () {
