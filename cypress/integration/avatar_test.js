@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Avatar', () => {
+context('hubspot', () => {
     beforeEach(() => {
         cy.visit('/?path=/story/');
         cy.get('#buttons-avatar').click();
