@@ -6,20 +6,15 @@ pipeline {
                 sh 'npm install'
             }
         }
-        stage('Cypress') {
+        stage('Cypress and Perrcy') {
             steps {
-                sh 'npm run preTest'
+                sh 'npm run percy'
             }
         }
         stage('Browserstack') {
             steps {
                 sh 'npm install browserstack-cypress-cli'
                 sh 'npm run browserstack'
-            }
-        }
-        stage('Percy') {
-            steps {
-                sh 'npm run percy'
             }
         }
     }
