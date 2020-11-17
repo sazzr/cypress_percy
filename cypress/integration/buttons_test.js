@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Buttons', () => {
+context('hubspot', () => {
     beforeEach(() => {
         cy.visit('/?path=/story/');
         cy.get('#buttons-button').click();
@@ -8,8 +8,8 @@ context('Buttons', () => {
     })
 
     
-    describe('[Buttons] Components', function() {
-        describe('[Buttons] Editable', function() {
+    describe('Components', function() {
+        describe('Editable Buttons', function() {
             it(' [Buttons] Is edit clickable', function () {
                 /** 
                 *** Arrange  - setup

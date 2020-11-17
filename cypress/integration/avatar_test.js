@@ -7,8 +7,8 @@ context('hubspot', () => {
         cy.get('#buttons-avatar-component').click();
     })
 
-    describe(' [Avatar] Components', function() {
-        describe(' [Avatar] Editable', function() {
+    describe('Components', function() {
+        describe('Avatar Editable', function() {
             it(' [Avatar] Is edit clickable', function () {
                 /** 
                 *** Arrange  - setup
