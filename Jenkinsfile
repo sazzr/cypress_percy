@@ -25,7 +25,7 @@ pipeline {
     post ('Reports'){
         always {
             junit 'results/*.xml'
-            pangolinTestRail(testRailProject: 'Pangolin_POC', configs: [[failIfUploadFailed: false, format: 'junit', resultPattern: 'results/*.xml', testPath: 'Master\\Section1\\SubSection1']])
+            pangolinTestRail(testRailProject: 'Pangolin_POC', configs: [[failIfUploadFailed: false, format: 'junit', milestonePath: 'Cypress-Percy ML1\\Cypress-Percy ML2', resultPattern: 'results/*.xml', testPath: 'Master\\Section1\\SubSection1', testPlan: 'Cypress-Percy Test Plan ${BUILD_NUMBER}', testRun: 'Cypress-Percy Test Run ${BUILD_NUMBER}']])
         }
     }
 }
