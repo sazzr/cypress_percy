@@ -36,7 +36,7 @@
     "run_settings": {
         "cypress_config_file": "./cypress.json",
         "project_name": "My sandbox project",
-        "build_name": "${process.env.BROWSERSTACK_BUILD_NAME}",
+        "build_name": "${BROWSERSTACK_BUILD_NAME}",
         "exclude": [],
         "parallels": "1",
         "npm_dependencies": {
